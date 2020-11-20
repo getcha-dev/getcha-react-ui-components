@@ -2,8 +2,13 @@ import { createGlobalStyle } from 'styled-components';
 import palette from './palette';
 
 const GlobalStyles = createGlobalStyle`
-  html {
+  html {    
     box-sizing: border-box;    
+  }
+  body {
+    @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+    @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+    font-family: 'Spoqa Han Sans' !important;
   }
 
   *, *:before, *:after {
