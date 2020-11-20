@@ -1,5 +1,10 @@
 {
   "name": "getcha-storybook",
+  "author": {
+    "name": "brouk, hyeongwuk - choi",
+    "email": "cdbrouk@gmail.com",
+    "url": "https://github.com/cdbrouk"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
