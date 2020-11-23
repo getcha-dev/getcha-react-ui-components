@@ -9,10 +9,10 @@ import {
   Subtitle,
   Title,
 } from '@storybook/addon-docs/blocks';
-import GNB, { GNBDataProps, GNBStyleProps } from '../../../components/common/GNB';
+import GNB, { GNBDataProps, GNBStyleProps } from '../../components/common/GNB';
 
 export default {
-  title: 'Common/GNB',
+  title: 'GNB',
   component: GNB,
   parameters: {
     docs: {
