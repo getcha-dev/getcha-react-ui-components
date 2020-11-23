@@ -211,7 +211,7 @@ const GNB: React.FC<GNBStyleProps & GNBDataProps> = ({
           <GetchaLogo />
           <MainNavChip
             isActive={isMainActive}
-            href="/"
+            href="https://www.getcha.kr/"
             marginLeft={23}
             darkMode={darkMode}
             onClick={() => setIsMainActive(true)}
@@ -220,7 +220,7 @@ const GNB: React.FC<GNBStyleProps & GNBDataProps> = ({
           </MainNavChip>
           <MainNavChip
             isActive={!isMainActive}
-            href="/community"
+            href="https://www.getcha.kr/community"
             darkMode={darkMode}
             onClick={() => setIsMainActive(false)}
           >
