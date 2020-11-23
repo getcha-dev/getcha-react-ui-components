@@ -102,7 +102,7 @@ const SearchBar = styled.div<GNBStyleProps>`
   flex: 1;
   max-width: 573px;
   min-width: 190px;
-  height: 38px;
+  height: 20px;
   border-radius: 2px;
   padding: 9px;
   cursor: pointer;
@@ -211,7 +211,7 @@ const GNB: React.FC<GNBStyleProps & GNBDataProps> = ({
           <GetchaLogo />
           <MainNavChip
             isActive={isMainActive}
-            href="/"
+            href="https://www.getcha.kr/"
             marginLeft={23}
             darkMode={darkMode}
             onClick={() => setIsMainActive(true)}
@@ -220,7 +220,7 @@ const GNB: React.FC<GNBStyleProps & GNBDataProps> = ({
           </MainNavChip>
           <MainNavChip
             isActive={!isMainActive}
-            href="/community"
+            href="https://www.getcha.kr/community"
             darkMode={darkMode}
             onClick={() => setIsMainActive(false)}
           >
