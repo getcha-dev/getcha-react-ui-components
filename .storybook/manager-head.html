@@ -1,5 +1,14 @@
 <!-- Storybook override -->
 <link rel="icon" href="./public/favicon.ico" />
 <title>Getcha Storybook</title>
-<script>  
+<script>
+  var observer = new MutationObserver(function(mutations) {
+    if (document.title.match(/Storybook$/)) {
+      document.title = "custom title";
+    }
+  }).observe(document.querySelector("title"), {
+    childList: true,
+    subtree: true,
+    characterData: true
+  });  
 </script>
