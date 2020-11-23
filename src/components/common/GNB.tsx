@@ -102,7 +102,7 @@ const SearchBar = styled.div<GNBStyleProps>`
   flex: 1;
   max-width: 573px;
   min-width: 190px;
-  height: 38px;
+  height: 20px;
   border-radius: 2px;
   padding: 9px;
   cursor: pointer;
