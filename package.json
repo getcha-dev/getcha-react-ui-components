@@ -5,7 +5,12 @@
     "email": "cdbrouk@gmail.com",
     "url": "https://github.com/cdbrouk"
   },
-  "version": "0.1.0",
+  "module": "dist/index.js",
+  "version": "1.0.0",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "private": true,
   "dependencies": {
     "@storybook/addon-docs": "^6.1.2",
@@ -28,7 +33,9 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public --no-dll",
     "build-storybook": "build-storybook -s public --no-dll",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "build": "rollup -c",
+    "build:types": "tsc --emitDeclarationOnly"
   },
   "storybook-deployer": {
     "gitUsername": "cdbrouk",
@@ -63,6 +70,7 @@
     "@storybook/node-logger": "^6.1.2",
     "@storybook/preset-create-react-app": "^3.1.5",
     "@storybook/storybook-deployer": "^2.8.7",
+    "@svgr/rollup": "^5.5.0",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
     "babel-loader": "^8.1.0",
@@ -77,6 +85,12 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "4.0.0",
     "prettier": "^2.1.2",
-    "react-is": "^17.0.1"
+    "react-is": "^17.0.1",
+    "rollup": "^2.33.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-url": "^3.0.1"
   }
 }
