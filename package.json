@@ -7,6 +7,7 @@
   "files": [
     "/dist"
   ],
+  "license": "MIT",
   "private": false,
   "dependencies": {
     "@storybook/addon-docs": "^6.1.2",
