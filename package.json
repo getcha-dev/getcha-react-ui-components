@@ -11,7 +11,7 @@
   "repository": {
     "url": "https://github.com/getcha-dev/getcha-storybook"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@storybook/addon-docs": "^6.1.2",
     "@storybook/react": "^6.1.2",
