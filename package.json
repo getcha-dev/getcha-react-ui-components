@@ -7,6 +7,10 @@
   "files": [
     "/dist"
   ],
+  "homepage": "https://getcha-dev.github.io/getcha-react-ui-components/?path=/story/intro--page",
+  "repository": {
+    "url": "https://github.com/getcha-dev/getcha-react-ui-components"
+  },
   "license": "MIT",
   "private": false,
   "dependencies": {
