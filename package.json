@@ -7,10 +7,6 @@
   "files": [
     "/dist"
   ],
-  "homepage": "https://getcha-dev.github.io/getcha-storybook",
-  "repository": {
-    "url": "https://github.com/getcha-dev/getcha-storybook"
-  },
   "private": false,
   "dependencies": {
     "@storybook/addon-docs": "^6.1.2",
