@@ -1,5 +1,5 @@
 {
-  "name": "getcha-storybook",
+  "name": "getcha-react-ui-components",
   "author": "cdbrouk",
   "module": "dist/index.js",
   "version": "1.0.0",
