@@ -2,7 +2,7 @@
   "name": "getcha-react-ui-components",
   "author": "cdbrouk",
   "module": "dist/index.js",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "types": "dist/types/index.d.ts",
   "files": [
     "/dist"
