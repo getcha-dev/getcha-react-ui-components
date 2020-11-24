@@ -35,7 +35,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "deploy-storybook": "storybook-to-ghpages",
-    "build": "rollup -c",
+    "build": "rollup --config .config/rollup.config.js",
     "build:types": "tsc --emitDeclarationOnly"
   },
   "storybook-deployer": {
