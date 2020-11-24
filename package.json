@@ -1,10 +1,6 @@
 {
   "name": "getcha-storybook",
-  "author": {
-    "name": "brouk, hyeongwuk - choi",
-    "email": "cdbrouk@gmail.com",
-    "url": "https://github.com/cdbrouk"
-  },
+  "author": "cdbrouk",
   "module": "dist/index.js",
   "version": "1.0.0",
   "types": "dist/types/index.d.ts",
