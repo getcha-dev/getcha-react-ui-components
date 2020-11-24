@@ -17,9 +17,13 @@
     "resolveJsonModule": true,
     "jsx": "react",
     "declaration": true,
-    "declarationDir": "dist/types"
+    "declarationDir": "dist/types",
+    "typeRoots": ["./types"]
   },
   "include": [
-    "src"
-  ],  
+    "src/**/*"
+  ],
+  "exclude": [
+    "src/stories/**/*"
+  ]
 }

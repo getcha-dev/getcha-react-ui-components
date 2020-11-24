@@ -12,7 +12,6 @@ export interface GNBStyleProps {
   fixed?: boolean;
   showTitle?: boolean;
 }
-
 export interface GNBDataProps {
   /*
    *  Description
