@@ -196,12 +196,12 @@ const EmptyBlock = styled.div`
   height: 28px;
 `;
 
-const GNB: React.FC<GNBStyleProps & GNBDataProps> = ({
+const GNB = ({
   darkMode = false,
   fixed = true,
   showTitle = true,
   title = 'Please set page title',
-}) => {
+}: GNBStyleProps & GNBDataProps): JSX.Element => {
   const [isMainActive, setIsMainActive] = useState(true);
 
   return (
