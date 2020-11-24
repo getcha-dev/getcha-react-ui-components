@@ -11,7 +11,7 @@
   "private": false,
   "dependencies": {
     "@storybook/addon-docs": "^6.1.2",
-    "@storybook/react": "^6.1.2",
+    "@storybook/react": "^6.1.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -28,8 +28,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006 -s public --no-dll",
-    "build-storybook": "build-storybook -s public --no-dll",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
     "deploy-storybook": "storybook-to-ghpages",
     "build": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly"
@@ -59,12 +59,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
-    "@storybook/addon-actions": "^6.1.2",
-    "@storybook/addon-essentials": "^6.1.2",
-    "@storybook/addon-links": "^6.1.2",
+    "@storybook/addon-actions": "^6.1.4",
+    "@storybook/addon-essentials": "^6.1.4",
+    "@storybook/addon-links": "^6.1.4",
     "@storybook/addons": "^6.1.2",
     "@storybook/core-events": "^6.1.2",
-    "@storybook/node-logger": "^6.1.2",
+    "@storybook/node-logger": "^6.1.4",
     "@storybook/preset-create-react-app": "^3.1.5",
     "@storybook/storybook-deployer": "^2.8.7",
     "@svgr/rollup": "^5.5.0",
