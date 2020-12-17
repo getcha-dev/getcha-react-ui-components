@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "./main.48b55f09e70c59704c24.bundle.js",
+    "main.js.map": "./main.48b55f09e70c59704c24.bundle.js.map",
+    "runtime~main.js": "./runtime~main.48b55f09e70c59704c24.bundle.js",
+    "runtime~main.js.map": "./runtime~main.48b55f09e70c59704c24.bundle.js.map",
+    "vendors~main.js": "./vendors~main.48b55f09e70c59704c24.bundle.js",
+    "vendors~main.js.map": "./vendors~main.48b55f09e70c59704c24.bundle.js.map",
+    "iframe.html": "./iframe.html",
+    "static/media/input_clear.5cfe698e.svg": "./static/media/input_clear.5cfe698e.svg",
+    "static/media/input_clear.7969c58a.svg": "./static/media/input_clear.7969c58a.svg",
+    "static/media/input_success.3c4d1c78.svg": "./static/media/input_success.3c4d1c78.svg",
+    "static/media/input_success.abd89ab7.svg": "./static/media/input_success.abd89ab7.svg",
+    "static/media/input_warning.3588bc92.svg": "./static/media/input_warning.3588bc92.svg",
+    "static/media/input_warning.d93029cc.svg": "./static/media/input_warning.d93029cc.svg",
+    "vendors~main.48b55f09e70c59704c24.bundle.js.LICENSE.txt": "./vendors~main.48b55f09e70c59704c24.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.48b55f09e70c59704c24.bundle.js",
+    "vendors~main.48b55f09e70c59704c24.bundle.js",
+    "main.48b55f09e70c59704c24.bundle.js"
+  ]
+}

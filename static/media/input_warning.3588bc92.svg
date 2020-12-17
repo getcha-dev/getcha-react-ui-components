@@ -1,0 +1,28 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+import * as React from "react";
+
+var _ref = /*#__PURE__*/React.createElement("path", {
+  fillRule: "evenodd",
+  clipRule: "evenodd",
+  d: "M6.276 3.83c.773-1.314 2.675-1.314 3.448 0l4.503 7.656c.784 1.333-.177 3.014-1.724 3.014H3.497c-1.547 0-2.508-1.68-1.724-3.014l4.503-7.655z",
+  fill: "#FE3D04"
+});
+
+var _ref2 = /*#__PURE__*/React.createElement("path", {
+  fillRule: "evenodd",
+  clipRule: "evenodd",
+  d: "M8.875 5.895A.869.869 0 008 5.14c-.486 0-.88.38-.88.847v4.002l.005.093a.869.869 0 00.875.754c.486 0 .88-.379.88-.847V5.987l-.005-.092zm0 6.59a.88.88 0 00-1.755.095l.005.096a.88.88 0 001.755-.096l-.005-.096z",
+  fill: "#fff"
+});
+
+function SvgInputWarning(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 16,
+    height: 17,
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, props), _ref, _ref2);
+}
+
+export default SvgInputWarning;

@@ -1,0 +1,31 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+import * as React from "react";
+
+var _ref = /*#__PURE__*/React.createElement("path", {
+  fillRule: "evenodd",
+  clipRule: "evenodd",
+  d: "M8 13.3a4.8 4.8 0 100-9.6 4.8 4.8 0 000 9.6z",
+  fill: "#38C52F",
+  stroke: "#38C52F",
+  strokeWidth: 2
+});
+
+var _ref2 = /*#__PURE__*/React.createElement("path", {
+  d: "M10.8 7.06l-3.36 3.2L5.2 8.127",
+  stroke: "#fff",
+  strokeWidth: 2,
+  strokeLinecap: "round",
+  strokeLinejoin: "round"
+});
+
+function SvgInputSuccess(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 16,
+    height: 17,
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, props), _ref, _ref2);
+}
+
+export default SvgInputSuccess;
