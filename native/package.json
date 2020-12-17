@@ -1,0 +1,7 @@
+{
+  "name": "getcha-react-ui-components/native",
+  "private": true,
+  "module": "./dist/getcha-react-ui-components.native.js",
+  "main": "./dist/getcha-react-ui-components.native.js",
+  "types": "../typings/native/index.d.ts"
+}
