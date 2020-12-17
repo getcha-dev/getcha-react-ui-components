@@ -3,19 +3,19 @@ import styled from 'styled-components/native';
 import palette from '../static/palette';
 
 export interface GetchaButtonProps {
-  /** 버튼 가로 */
+  /** Button Width */
   width?: number;
-  /** 버튼 높이 */
+  /** Button Height */
   height?: number;
-  /** 버튼 배경 색 */
+  /** Button Background Color */
   backgroundColor?: string;
-  /** 버튼 텍스트 색 */
+  /** Button Text Color */
   color?: string;
-  /** 버튼 텍스트 */
+  /** Button Text */
   text?: string;
-  /** 버튼 비활성화 */
+  /** Button Display State */
   disabled?: boolean;
-  /** 버튼 이벤트 */
+  /** Button Press Event */
   onPress?: () => void;
 }
 

@@ -11,53 +11,48 @@ module.exports = {
       },
     },
     '@storybook/addon-knobs/register',
-    '@storybook/preset-create-react-app',
   ],
   webpackFinal: async (config) => {
-    return {
-      ...config,
-      module: {
-        ...config.module,
-        rules: [
-          ...config.module.rules,
-          {
-            test: /\.js$/,
-            exclude: /node_modules[/\\](?!react-native-vector-icons|react-native-safe-area-view)/,
-            use: {
-              loader: 'babel-loader',
-              options: {
-                // Disable reading babel configuration
-                babelrc: false,
-                configFile: false,
+    const assetRule = config.module.rules.find(({ test }) => test.test('.svg'));
 
-                // The configuration for compilation
-                presets: [
-                  ['@babel/preset-env', { useBuiltIns: 'usage' }],
-                  '@babel/preset-react',
-                  '@babel/preset-flow',
-                  '@babel/preset-typescript',
-                ],
-                plugins: [
-                  '@babel/plugin-proposal-class-properties',
-                  '@babel/plugin-proposal-object-rest-spread',
-                ],
-              },
-            },
-          },
-          {
-            test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
-            loader: 'file-loader',
-          },
-        ],
-      },
-      resolve: {
-        ...config.resolve,
-        alias: {
-          ...config.resolve.alias,
-          'react-native$': require.resolve('react-native-web'),
-          'react-native-linear-gradient': 'react-native-web-linear-gradient',
+    const assetLoader = {
+      loader: assetRule.loader,
+      options: assetRule.options || assetRule.query,
+    };
+    config.module.rules.unshift({
+      test: /\.svg$/,
+      use: ['@svgr/webpack', assetLoader],
+    });
+    config.module.rules.push({
+      test: /\.js$/,
+      exclude: /node_modules[/\\](?!react-native-vector-icons|react-native-safe-area-view)/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          // Disable reading babel configuration
+          babelrc: false,
+          configFile: false,
+
+          // The configuration for compilation
+          presets: [
+            ['@babel/preset-env', { useBuiltIns: 'usage' }],
+            '@babel/preset-react',
+            '@babel/preset-flow',
+            '@babel/preset-typescript',
+          ],
+          plugins: [
+            '@babel/plugin-proposal-class-properties',
+            '@babel/plugin-proposal-object-rest-spread',
+          ],
         },
       },
+    });
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'react-native$': require.resolve('react-native-web'),
+      'react-native-linear-gradient': 'react-native-web-linear-gradient',
     };
+
+    return config;
   },
 };

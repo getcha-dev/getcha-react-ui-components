@@ -5,15 +5,15 @@ import LinearGradient from 'react-native-linear-gradient';
 import palette from '../static/palette';
 
 export interface GetchaModalProps {
-  /** 모달 노출 여부 */
+  /** Modal Display State */
   visible?: boolean;
-  /** 모달 타이틀 */
+  /** Modal Title Text */
   modalTitle?: string;
-  /** 모달 버튼 텍스트 */
+  /** Modal Button Text */
   buttonTitle?: string;
-  /** 본문 Component */
+  /** Modal Children Component (Content) */
   children?: React.FC | JSX.Element;
-  /** 모달 버튼 이벤트 */
+  /** Modal Button Press Event */
   onPressButton?: () => void;
 }
 
