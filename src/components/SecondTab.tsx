@@ -16,14 +16,35 @@ const ContentBlock = styled.View`
 
 const SecondTab: React.FC = () => {
   const [value, setValue] = useState<string>('');
-  const onChange = useCallback((text) => setValue(text), [setValue]);
+  const [error, setError] = useState<boolean | string>(false);
+  const [success, setSuccess] = useState<boolean | string>(false);
+  const onChangeText = useCallback((text) => setValue(text), [setValue]);
+  const onBlur = useCallback(() => {
+    if (value.length < 1) {
+      setSuccess(false);
+      setError('invalid input');
+    } else {
+      setSuccess('valid input');
+      setError(false);
+    }
+  }, [value, setError, setSuccess]);
+
   return (
     <TabBlock>
       <ContentBlock>
-        <GetchaInput value={value} onChange={onChange} />
+        <GetchaInput
+          value={value}
+          onChangeText={onChangeText}
+          success={success}
+          error={error}
+          onBlur={onBlur}
+        />
       </ContentBlock>
       <ContentBlock>
         <GetchaInput editable={false} />
+      </ContentBlock>
+      <ContentBlock>
+        <GetchaInput />
       </ContentBlock>
     </TabBlock>
   );

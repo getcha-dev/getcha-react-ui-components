@@ -27,10 +27,10 @@ module.exports = {
     // });
 
     config.module.rules.push({
-       test: /\.svg$/,
-       enforce: "pre",
-       loader: require.resolve("@svgr/webpack")
-    })
+      test: /\.svg$/,
+      enforce: 'pre',
+      loader: require.resolve('@svgr/webpack'),
+    });
 
     config.module.rules.push({
       test: /\.js$/,
