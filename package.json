@@ -6,7 +6,7 @@
   },
   "main": "./dist/getcha-react-ui-components.js",
   "module": "./dist/getcha-react-ui-components.js",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "license": "MIT",
   "types": "./typings/web/index.d.ts",
   "description": "Getcha UI Components for React, React-Native",
