@@ -14,17 +14,27 @@ module.exports = {
   ],
   webpackFinal: async (config) => {
     const assetRule = config.module.rules.find(({ test }) => test.test('.svg'));
+    assetRule.exclude = /\.svg$/;
 
     const assetLoader = {
       loader: assetRule.loader,
       options: assetRule.options || assetRule.query,
     };
-    config.module.rules.unshift({
-      test: /\.svg$/,
-      use: ['@svgr/webpack', assetLoader],
-    });
+
+    // config.module.rules.unshift({
+    //   test: /\.svg$/,
+    //   use: ['@svgr/webpack', assetLoader],
+    // });
+
+    config.module.rules.push({
+       test: /\.svg$/,
+       enforce: "pre",
+       loader: require.resolve("@svgr/webpack")
+    })
+
     config.module.rules.push({
       test: /\.js$/,
+
       exclude: /node_modules[/\\](?!react-native-vector-icons|react-native-safe-area-view)/,
       use: {
         loader: 'babel-loader',
