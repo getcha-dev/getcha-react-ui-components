@@ -6,14 +6,16 @@
   },
   "main": "./dist/getcha-react-ui-components.js",
   "module": "./dist/getcha-react-ui-components.js",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT",
   "types": "./typings/web/index.d.ts",
   "description": "Getcha UI Components for React, React-Native",
   "files": [
     "dist",
     "native",
-    "typings"
+    "typings/native",
+    "typings/static",
+    "typings/web"
   ],
   "keywords": [
     "react",
@@ -40,12 +42,14 @@
     "buildclean": "rm -rf typings && rm -rf dist && rm -rf native/dist",
     "build:publish": "yarn buildclean && yarn build:rollup && yarn build:types",
     "deploy-storybook-s3": "storybook-to-aws-s3 --bucket-path=storybook.getcha.io",
+    "deploy-storybook-gh-pages": "storybook-to-ghpages",
     "cloudfront-refresh": "aws cloudfront create-invalidation --distribution-id=E2TH744ISB1ZLH --paths '/*'",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "core-js": "2.6.5",
+    "@svgr/babel-plugin-transform-react-native-svg": "^5.4.0",
+    "core-js": "3",
     "react-native-linear-gradient": "^2.5.6",
     "styled-components": "^5.0.1"
   },
@@ -82,6 +86,7 @@
     "@storybook/react": "^6.1.4",
     "@storybook/storybook-deployer": "^2.8.7",
     "@svgr/rollup": "^5.5.0",
+    "@svgr/webpack": "^5.5.0",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
@@ -118,6 +123,7 @@
     "react-native-screens": "^2.16.1",
     "react-native-svg": "^12.1.0",
     "react-native-svg-transformer": "^0.14.3",
+    "react-native-svg-web": "^1.0.9",
     "react-native-web": "^0.14.9",
     "react-native-web-linear-gradient": "^1.1.1",
     "react-scripts": "4.0.0",
