@@ -12,7 +12,6 @@ export default {
 } as Meta;
 
 export const Default: Story = () => {
-  /** 버튼 가로 길이 */
   const width = number('width', 360);
   const height = number('height', 52);
   const buttonText = text('text', 'Getcha');

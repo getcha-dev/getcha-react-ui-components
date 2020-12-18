@@ -1,4 +1,4 @@
 {
   "presets": [["react-app",{"flow": false, "typescript": true}]],
-  "plugins": ["babel-plugin-styled-components"]
+  "plugins": ["babel-plugin-styled-components", "@svgr/babel-plugin-transform-react-native-svg"]
 }
