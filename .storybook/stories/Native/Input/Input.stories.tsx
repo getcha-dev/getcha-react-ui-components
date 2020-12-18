@@ -1,12 +1,12 @@
 import React, { useCallback, useState } from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import GetchaInput from '../../../src/native/GetchaInput';
+import GetchaInput from '../../../../src/native/GetchaInput';
 import { boolean, text, withKnobs } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 export default {
-  title: 'Native/GetchaInput',
+  title: 'Native/ Input / InputDefault',
   component: GetchaInput,
   decorators: [withKnobs],
 } as Meta;

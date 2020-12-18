@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import styled from 'styled-components/native';
-import { GetchaInput } from '../native';
+import { GetchaInput, GetchaInputWithButton, GetchaInputWithTimer } from '../native';
 
 const TabBlock = styled.View`
   flex: 1;
@@ -28,23 +28,29 @@ const SecondTab: React.FC = () => {
       setError(false);
     }
   }, [value, setError, setSuccess]);
+  const onPressButton = () => window.alert('onPressButton');
 
   return (
     <TabBlock>
-      <ContentBlock>
-        <GetchaInput
-          value={value}
-          onChangeText={onChangeText}
-          success={success}
-          error={error}
-          onBlur={onBlur}
-        />
-      </ContentBlock>
       <ContentBlock>
         <GetchaInput editable={false} />
       </ContentBlock>
       <ContentBlock>
         <GetchaInput />
+      </ContentBlock>
+      <ContentBlock>
+        <GetchaInputWithButton
+          value={value}
+          onChangeText={onChangeText}
+          success={success}
+          error={error}
+          onBlur={onBlur}
+          buttonActive={value.length > 0}
+          onPressButton={onPressButton}
+        />
+      </ContentBlock>
+      <ContentBlock>
+        <GetchaInputWithTimer timer={180} />
       </ContentBlock>
     </TabBlock>
   );

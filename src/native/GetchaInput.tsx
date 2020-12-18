@@ -2,18 +2,22 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
 import { TouchableWithoutFeedback } from 'react-native';
-import { InputClearSVG, InputSuccessSVG, InputWarningSVG } from '../static/svg';
+import { InputClearSVG, InputSuccessSVG, InputWarningSVG } from './svg';
 import palette from '../static/palette';
 
 export interface GetchaInputProps {
   /** Reference Variable */
   ref?: any;
+  /** width */
+  width?: number | string;
+  /** height */
+  height?: number | string;
   /** Active State */
   editable?: boolean;
   /** Input Error State */
   error?: boolean | string;
   /** Input Title Label */
-  label?: string;
+  label?: string | null;
   /** Input pattern */
   pattern?: '[0-9]*';
   /** Input Placeholder */
@@ -35,14 +39,14 @@ export interface GetchaInputProps {
   onBlur?: () => void;
 }
 
-export const InputBlock = styled.View`
+export const InputBlock = styled.View<GetchaInputProps>`
   position: relative;
-  width: 100%;
+  width: ${(props) => (typeof props.width === 'number' ? `${props.width}px` : props.width)};
 `;
 
 export const InputClearButtonBlock = styled.View`
   position: absolute;
-  top: 12px;
+  top: 17px;
   right: 12px;
 `;
 
@@ -56,6 +60,7 @@ export const Label = styled.Text<GetchaInputProps>`
 
 export const Input = styled.TextInput<GetchaInputProps>`
   margin-top: 6px;
+  height: ${(props) => (typeof props.height === 'number' ? `${props.height}px` : props.height)};
   font-size: 14px;
   line-height: 20px;
   border-radius: 2px;
@@ -90,7 +95,15 @@ export const Message = styled.Text<MessageProps>`
   margin-left: 4px;
 `;
 
+/**
+ * Default Input Component
+ *
+ * - cursor color only changed on react native app
+ */
+
 const GetchaInput = ({
+  width = '100%',
+  height = 42,
   ref = null,
   editable = true,
   isShowClearBtn = true,
@@ -108,9 +121,10 @@ const GetchaInput = ({
   return (
     <>
       {label && <Label error={error}>{label}</Label>}
-      <InputBlock>
+      <InputBlock width={width}>
         <Input
           ref={ref}
+          height={height}
           editable={editable}
           error={error}
           type={type}
@@ -128,7 +142,7 @@ const GetchaInput = ({
         {isShowClearBtn && showClear && value.length > 0 && (
           <InputClearButtonBlock>
             <TouchableWithoutFeedback onPress={() => onChangeText('')}>
-              <InputClearSVG />
+              <InputClearSVG width={20} height={20} />
             </TouchableWithoutFeedback>
           </InputClearButtonBlock>
         )}

@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   stories: ['./stories/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
   addons: [
@@ -15,16 +17,6 @@ module.exports = {
   webpackFinal: async (config) => {
     const assetRule = config.module.rules.find(({ test }) => test.test('.svg'));
     assetRule.exclude = /\.svg$/;
-
-    const assetLoader = {
-      loader: assetRule.loader,
-      options: assetRule.options || assetRule.query,
-    };
-
-    // config.module.rules.unshift({
-    //   test: /\.svg$/,
-    //   use: ['@svgr/webpack', assetLoader],
-    // });
 
     config.module.rules.push({
       test: /\.svg$/,
@@ -45,7 +37,16 @@ module.exports = {
 
           // The configuration for compilation
           presets: [
-            ['@babel/preset-env', { useBuiltIns: 'usage' }],
+            [
+              '@babel/preset-env',
+              {
+                targets: {
+                  browsers: ['> 1%', 'last 2 versions', 'ie 11'],
+                },
+                useBuiltIns: 'usage',
+                corejs: 3,
+              },
+            ],
             '@babel/preset-react',
             '@babel/preset-flow',
             '@babel/preset-typescript',
@@ -61,6 +62,7 @@ module.exports = {
       ...config.resolve.alias,
       'react-native$': require.resolve('react-native-web'),
       'react-native-linear-gradient': 'react-native-web-linear-gradient',
+      'react-native-svg': 'react-native-svg/lib/commonjs/ReactNativeSVG.web',
     };
 
     return config;

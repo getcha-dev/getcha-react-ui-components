@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import InputClearSVG from '../static/svg/input_clear.svg';
-import InputSuccessSVG from '../static/svg/input_success.svg';
-import InputWarningSVG from '../static/svg/input_warning.svg';
+import { InputClearSVG, InputSuccessSVG, InputWarningSVG } from '../native/svg';
 
 const TabBlock = styled.View`
   flex: 1;
@@ -28,8 +26,12 @@ const SVGIconsTab: React.FC = () => {
         <SVGBlock>
           <InputWarningSVG />
         </SVGBlock>
-        <SVGBlock>{/* <InputClearSVG width={16} height={16} /> */}</SVGBlock>
-        <SVGBlock>{/* <InputSuccessSVG width={16} height={16} /> */}</SVGBlock>
+        <SVGBlock>
+          <InputClearSVG width={16} height={16} />
+        </SVGBlock>
+        <SVGBlock>
+          <InputSuccessSVG width={16} height={16} />
+        </SVGBlock>
       </RowBlock>
     </TabBlock>
   );
