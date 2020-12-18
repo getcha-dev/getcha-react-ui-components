@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonProps } from 'react-native';
+import { TouchableOpacityProps } from 'react-native';
 import styled from 'styled-components/native';
 import palette from '../static/palette';
 
@@ -52,16 +52,14 @@ const GetchaButton = ({
   color = palette.base.white,
   backgroundColor = palette.point.red_getcha,
   disabled = false,
-  onPress = (): void => {},
   ...rest
-}: GetchaButtonProps & ButtonProps): JSX.Element => (
+}: GetchaButtonProps & TouchableOpacityProps): JSX.Element => (
   <GetchaButtonBlock
     disabled={disabled}
     width={width}
     height={height}
     color={color}
     backgroundColor={backgroundColor}
-    onPress={onPress}
     activeOpacity={1}
     {...rest}
   >
