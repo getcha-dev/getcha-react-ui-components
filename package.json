@@ -6,7 +6,7 @@
   },
   "main": "./dist/getcha-react-ui-components.js",
   "module": "./dist/getcha-react-ui-components.js",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT",
   "types": "./typings/web/index.d.ts",
   "description": "Getcha UI Components for React, React-Native",
@@ -48,7 +48,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "core-js": "2.6.5",
+    "core-js": "3",
     "react-native-linear-gradient": "^2.5.6",
     "styled-components": "^5.0.1"
   },
