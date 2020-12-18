@@ -156,7 +156,7 @@ const GetchaModal = ({
           >
             <ModalScrollBodyView>{children}</ModalScrollBodyView>
           </ModalScrollBody>
-          <ModalButton onPress={onPressButton}>
+          <ModalButton onPress={onPressButton} activeOpacity={1}>
             <ModalButtonText>{buttonTitle}</ModalButtonText>
           </ModalButton>
           {isMaxSize && (

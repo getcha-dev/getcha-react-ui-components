@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
-import { TouchableWithoutFeedback } from 'react-native';
+import { TextInputProps, TouchableWithoutFeedback } from 'react-native';
 import { InputClearSVG, InputSuccessSVG, InputWarningSVG } from './svg';
 import palette from '../static/palette';
 
@@ -115,7 +115,8 @@ const GetchaInput = ({
   value = '',
   onChangeText = () => {},
   onBlur = () => {},
-}: GetchaInputProps): JSX.Element => {
+  ...rest
+}: GetchaInputProps & TextInputProps): JSX.Element => {
   const [showClear, setShowClear] = useState(false);
 
   return (
@@ -138,6 +139,7 @@ const GetchaInput = ({
           }}
           onFocus={() => setShowClear(true)}
           onChangeText={onChangeText}
+          {...rest}
         />
         {isShowClearBtn && showClear && value.length > 0 && (
           <InputClearButtonBlock>

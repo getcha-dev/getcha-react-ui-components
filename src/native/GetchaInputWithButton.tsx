@@ -69,6 +69,7 @@ const GetchaInputWithButton: React.FC<GetchaInputWithButtonProps> = ({
   onChangeText = () => {},
   onPressButton = () => {},
   onBlur = () => {},
+  ...rest
 }) => {
   const [showClear, setShowClear] = useState(false);
 
@@ -92,6 +93,7 @@ const GetchaInputWithButton: React.FC<GetchaInputWithButtonProps> = ({
           }}
           onFocus={() => setShowClear(true)}
           onChangeText={onChangeText}
+          {...rest}
         />
 
         <InputAbsBlock>
@@ -105,6 +107,7 @@ const GetchaInputWithButton: React.FC<GetchaInputWithButtonProps> = ({
             buttonColor={buttonColor}
             onPress={onPressButton}
             disabled={!buttonActive}
+            activeOpacity={1}
           >
             <InputAbsButtonText>{buttonText}</InputAbsButtonText>
           </InputAbsButton>

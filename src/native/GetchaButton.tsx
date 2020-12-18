@@ -1,10 +1,11 @@
 import React from 'react';
+import { ButtonProps } from 'react-native';
 import styled from 'styled-components/native';
 import palette from '../static/palette';
 
 export interface GetchaButtonProps {
   /** Button Width */
-  width?: number;
+  width?: number | string;
   /** Button Height */
   height?: number;
   /** Button Background Color */
@@ -23,7 +24,7 @@ const GetchaButtonBlock = styled.TouchableOpacity<GetchaButtonProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: ${(props): number | undefined => props.width}px;
+  width: ${(props) => (typeof props.width === 'number' ? `${props.width}px` : props.width)};
   height: ${(props): number | undefined => props.height}px;
   color: ${(props): string | undefined => props.color};
   background-color: ${(props): string | undefined =>
@@ -52,7 +53,8 @@ const GetchaButton = ({
   backgroundColor = palette.point.red_getcha,
   disabled = false,
   onPress = (): void => {},
-}: GetchaButtonProps): JSX.Element => (
+  ...rest
+}: GetchaButtonProps & ButtonProps): JSX.Element => (
   <GetchaButtonBlock
     disabled={disabled}
     width={width}
@@ -60,6 +62,8 @@ const GetchaButton = ({
     color={color}
     backgroundColor={backgroundColor}
     onPress={onPress}
+    activeOpacity={1}
+    {...rest}
   >
     <Text>{text}</Text>
   </GetchaButtonBlock>

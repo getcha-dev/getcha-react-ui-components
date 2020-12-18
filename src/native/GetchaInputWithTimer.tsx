@@ -51,6 +51,7 @@ const GetchaInputWithTimer: React.FC<GetchaInputWithTimerProps> = ({
   onChangeText = () => {},
   onPressButton = () => {},
   onBlur = () => {},
+  ...rest
 }) => {
   return (
     <>
@@ -67,6 +68,7 @@ const GetchaInputWithTimer: React.FC<GetchaInputWithTimerProps> = ({
           value={value}
           onBlur={onBlur}
           onChangeText={onChangeText}
+          {...rest}
         />
 
         <InputAbsBlock>
