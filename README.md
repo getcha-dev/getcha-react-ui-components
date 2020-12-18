@@ -2,19 +2,21 @@
 
 ## Links
 
-### [getcha-storybook](https://storybook.getcha.io)
+### [Getcha Storybook](https://storybook.getcha.io)
 
-### [Notion - Design System](https://www.notion.so/getcha-design-system-ing-f885eb0f13044294acd7a6b05d05fe7e)
+### [Notion Design System](https://www.notion.so/getcha-design-system-ing-f885eb0f13044294acd7a6b05d05fe7e)
 
 ## Get Started
 
 Not support Expo project
 
+Need to styled-components and react-native-linear-gradient
+
 ```code
 yarn add getcha-react-ui-components
 ```
 
-#### Typescript
+### Typescript
 
 ```code
 yarn add -D @types/styled-components
@@ -24,10 +26,8 @@ yarn add -D @types/styled-components
 
 ### Native
 
+- GetchaInput
+- GetchaInputWithButton
+- GetchaInputWithTimer
 - GetchaButton
 - GetchaModal
-
-## Dependencies
-
-- styled-components (with babel setting)
-- react-native-gradient
