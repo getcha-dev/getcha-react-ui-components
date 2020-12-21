@@ -51,7 +51,7 @@ const SecondTab: React.FC = () => {
         />
       </ContentBlock>
       <ContentBlock>
-        <GetchaInputWithTimer timer={180} />
+        <GetchaInputWithTimer timer={70} />
       </ContentBlock>
     </TabBlock>
   );
