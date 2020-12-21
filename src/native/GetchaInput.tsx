@@ -7,7 +7,7 @@ import palette from '../static/palette';
 
 export interface GetchaInputProps extends TextInputProps {
   /** Reference Variable */
-  ref?: any;
+  inputRef?: any;
   /** width */
   width?: number | string;
   /** height */
@@ -104,7 +104,7 @@ export const Message = styled.Text<MessageProps>`
 const GetchaInput = ({
   width = '100%',
   height = 42,
-  ref = null,
+  inputRef = null,
   editable = true,
   isShowClearBtn = true,
   error = false,
@@ -124,7 +124,7 @@ const GetchaInput = ({
       {label && <Label error={error}>{label}</Label>}
       <InputBlock width={width}>
         <Input
-          ref={ref}
+          ref={inputRef}
           height={height}
           editable={editable}
           error={error}

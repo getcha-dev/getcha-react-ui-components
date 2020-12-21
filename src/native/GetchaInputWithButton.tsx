@@ -56,7 +56,7 @@ const GetchaInputWithButton: React.FC<GetchaInputWithButtonProps> = ({
   buttonText = 'button',
   width = '100%',
   height = 42,
-  ref = null,
+  inputRef = null,
   editable = true,
   isShowClearBtn = true,
   error = false,
@@ -77,7 +77,7 @@ const GetchaInputWithButton: React.FC<GetchaInputWithButtonProps> = ({
       {label && <Label error={error}>{label}</Label>}
       <InputBlock width={width}>
         <Input
-          ref={ref}
+          ref={inputRef}
           height={height}
           editable={editable}
           error={error}

@@ -38,7 +38,7 @@ const GetchaInputWithTimer: React.FC<GetchaInputWithTimerProps> = ({
   buttonText = 'button',
   width = '100%',
   height = 42,
-  ref = null,
+  inputRef = null,
   editable = true,
   error = false,
   success = false,
@@ -58,7 +58,7 @@ const GetchaInputWithTimer: React.FC<GetchaInputWithTimerProps> = ({
       {label && <Label error={error}>{label}</Label>}
       <InputBlock width={width}>
         <InputWithTimer
-          ref={ref}
+          ref={inputRef}
           height={height}
           editable={editable}
           error={error}
