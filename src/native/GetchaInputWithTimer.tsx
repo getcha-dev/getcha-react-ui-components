@@ -23,7 +23,7 @@ const InputWithTimer = styled(Input)<GetchaInputWithTimerProps>`
 
 const Timer = styled.Text`
   font-size: 12px;
-  color: ${palette.point.red_getcha};
+  color: ${palette.primary.red_getcha};
 `;
 
 /**
@@ -34,7 +34,7 @@ const Timer = styled.Text`
 
 const GetchaInputWithTimer: React.FC<GetchaInputWithTimerProps> = ({
   buttonActive = true,
-  buttonColor = palette.point.red_getcha,
+  buttonColor = palette.primary.red_getcha,
   buttonText = 'button',
   width = '100%',
   height = 42,
@@ -64,7 +64,7 @@ const GetchaInputWithTimer: React.FC<GetchaInputWithTimerProps> = ({
           error={error}
           type={type}
           placeholder={placeholder}
-          selectionColor={palette.point.red_getcha}
+          selectionColor={palette.primary.red_getcha}
           value={value}
           onBlur={onBlur}
           onChangeText={onChangeText}

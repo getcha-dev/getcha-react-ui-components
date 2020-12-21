@@ -28,7 +28,7 @@ const GetchaButtonBlock = styled.TouchableOpacity<GetchaButtonProps>`
   height: ${(props): number | undefined => props.height}px;
   color: ${(props): string | undefined => props.color};
   background-color: ${(props): string | undefined =>
-    props.disabled ? palette.base.gray350 : props.backgroundColor};
+    props.disabled ? palette.base.grey350 : props.backgroundColor};
   border-radius: 4px;
 `;
 
@@ -50,7 +50,7 @@ const GetchaButton = ({
   height = 52,
   text = 'button text',
   color = palette.base.white,
-  backgroundColor = palette.point.red_getcha,
+  backgroundColor = palette.primary.red_getcha,
   disabled = false,
   ...rest
 }: GetchaButtonProps & TouchableOpacityProps): JSX.Element => (

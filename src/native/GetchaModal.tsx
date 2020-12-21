@@ -78,7 +78,7 @@ const ModalButton = styled.TouchableOpacity`
   height: 42px;
   bottom: 0;
   left: 0;
-  background-color: ${palette.point.red_getcha};
+  background-color: ${palette.primary.red_getcha};
 `;
 
 const ModalButtonText = styled.Text`

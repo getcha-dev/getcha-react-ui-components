@@ -5,7 +5,7 @@ import { TextInputProps, TouchableWithoutFeedback } from 'react-native';
 import { InputClearSVG, InputSuccessSVG, InputWarningSVG } from './svg';
 import palette from '../static/palette';
 
-export interface GetchaInputProps {
+export interface GetchaInputProps extends TextInputProps {
   /** Reference Variable */
   ref?: any;
   /** width */
@@ -55,7 +55,7 @@ export const Label = styled.Text<GetchaInputProps>`
   font-size: 14px;
   line-height: 20px;
   letter-spacing: -0.38px;
-  color: ${(props) => (props.error ? palette.point.red_getcha : palette.base.black)};
+  color: ${(props) => (props.error ? palette.primary.red_getcha : palette.base.black)};
 `;
 
 export const Input = styled.TextInput<GetchaInputProps>`
@@ -64,15 +64,15 @@ export const Input = styled.TextInput<GetchaInputProps>`
   font-size: 14px;
   line-height: 20px;
   border-radius: 2px;
-  border: solid 1px ${(props) => (props.error ? palette.point.red_getcha : palette.base.gray300)};
+  border: solid 1px ${(props) => (props.error ? palette.primary.red_getcha : palette.base.grey300)};
   padding: 10px 12px 12px;
   padding-right: ${(props) => (props.isShowClearBtn ? 30 : 12)}px;
-  color: ${(props) => (props.editable ? palette.base.black : palette.base.gray500)};
+  color: ${(props) => (props.editable ? palette.base.black : palette.base.grey500)};
   background-color: ${(props) =>
     props.editable ? palette.base.white : 'rgba(239, 239, 239, 0.3)'};
 
   &:focus {
-    border: solid 1px ${(props) => (props.error ? palette.point.red_getcha : '#848484')};
+    border: solid 1px ${(props) => (props.error ? palette.primary.red_getcha : '#848484')};
   }
 `;
 
@@ -88,7 +88,7 @@ export interface MessageProps {
 }
 
 export const Message = styled.Text<MessageProps>`
-  color: ${(props) => (props.type === 'error' ? palette.point.red_getcha : '#38C52F')};
+  color: ${(props) => (props.type === 'error' ? palette.primary.red_getcha : '#38C52F')};
   font-size: 12px;
   line-height: 20px;
   letter-spacing: -0.33px;
@@ -116,7 +116,7 @@ const GetchaInput = ({
   onChangeText = () => {},
   onBlur = () => {},
   ...rest
-}: GetchaInputProps & TextInputProps): JSX.Element => {
+}: GetchaInputProps): JSX.Element => {
   const [showClear, setShowClear] = useState(false);
 
   return (
@@ -130,7 +130,7 @@ const GetchaInput = ({
           error={error}
           type={type}
           placeholder={placeholder}
-          selectionColor={palette.point.red_getcha}
+          selectionColor={palette.primary.red_getcha}
           value={value}
           isShowClearBtn={isShowClearBtn}
           onBlur={() => {

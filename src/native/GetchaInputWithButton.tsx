@@ -11,7 +11,7 @@ export interface GetchaInputWithButtonProps extends GetchaInputProps {
   buttonActive?: boolean;
   /**
    * button custom color
-   * - default: getcha.point.red_getcha
+   * - default: getcha.primary.red_getcha
    */
   buttonColor?: string;
   /** button text */
@@ -35,8 +35,7 @@ export const InputAbsButton = styled.TouchableOpacity<GetchaInputWithButtonProps
   margin-left: 6px;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) =>
-    props.buttonActive ? palette.point.red_getcha : palette.base.gray350};
+  background-color: ${(props) => (props.buttonActive ? props.buttonColor : palette.base.grey350)};
 `;
 
 export const InputAbsButtonText = styled.Text`
@@ -53,7 +52,7 @@ export const InputAbsButtonText = styled.Text`
 
 const GetchaInputWithButton: React.FC<GetchaInputWithButtonProps> = ({
   buttonActive = true,
-  buttonColor = palette.point.red_getcha,
+  buttonColor = palette.primary.red_getcha,
   buttonText = 'button',
   width = '100%',
   height = 42,
@@ -84,7 +83,7 @@ const GetchaInputWithButton: React.FC<GetchaInputWithButtonProps> = ({
           error={error}
           type={type}
           placeholder={placeholder}
-          selectionColor={palette.point.red_getcha}
+          selectionColor={palette.primary.red_getcha}
           value={value}
           isShowClearBtn={isShowClearBtn}
           onBlur={() => {
